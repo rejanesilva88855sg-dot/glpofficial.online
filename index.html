@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alice Hael | Vivendo a Verdade</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            pink: '#ff007f',
+                            purple: '#4a0e4e',
+                            dark: '#0f0f0f',
+                            light: '#f3f4f6'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Open Sans', 'sans-serif'],
+                        display: ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #0f0f0f;
+            color: #f3f4f6;
+            scroll-behavior: smooth;
+        }
+        .text-gradient {
+            background: linear-gradient(to right, #ff007f, #b983ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-glow {
+            box-shadow: 0 0 50px rgba(255, 0, 127, 0.3);
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(255, 0, 127, 0.2);
+            border-color: #ff007f;
+        }
+        /* Mobile menu transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 300px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-black/90 backdrop-blur-sm border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex-shrink-0">
+                    <span class="font-display font-black text-2xl text-white tracking-tighter">ALICE <span class="text-brand-pink">HAEL</span></span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="#inicio" class="hover:text-brand-pink px-3 py-2 rounded-md text-sm font-medium transition">Início</a>
+                        <a href="#sobre" class="hover:text-brand-pink px-3 py-2 rounded-md text-sm font-medium transition">Quem Sou</a>
+                        <a href="#dicas" class="hover:text-brand-pink px-3 py-2 rounded-md text-sm font-medium transition">Guia de Sobrevivência</a>
+                        <a href="#galeria" class="hover:text-brand-pink px-3 py-2 rounded-md text-sm font-medium transition">Galeria</a>
+                        <a href="#contato" class="bg-brand-pink hover:bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold transition">Fale Comigo</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button onclick="toggleMenu()" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden bg-gray-900">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" onclick="toggleMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Início</a>
+                <a href="#sobre" onclick="toggleMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Quem Sou</a>
+                <a href="#dicas" onclick="toggleMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Dicas</a>
+                <a href="#contato" onclick="toggleMenu()" class="text-brand-pink block px-3 py-2 rounded-md text-base font-bold">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="relative pt-24 pb-12 lg:pt-32 lg:pb-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                <div class="mb-10 lg:mb-0 text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-display font-black mb-6 leading-tight">
+                        Resistência, <br>
+                        <span class="text-gradient">Beleza & Verdade.</span>
+                    </h1>
+                    <p class="text-lg text-gray-300 mb-8 max-w-2xl mx-auto lg:mx-0">
+                        Um guia honesto e direto sobre como ser travesti no Brasil, enfrentar o preconceito e construir sua própria narrativa. Por Alice Hael.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                        <a href="#dicas" class="px-8 py-4 bg-brand-pink hover:bg-pink-600 rounded-full font-bold text-white transition transform hover:scale-105 shadow-lg shadow-pink-500/30">
+                            Ver Dicas
+                        </a>
+                        <a href="https://youtube.com" target="_blank" class="px-8 py-4 border border-gray-600 hover:border-white rounded-full font-bold text-white transition flex items-center justify-center gap-2">
+                            <i class="fab fa-youtube"></i> Assista no YouTube
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="absolute inset-0 bg-brand-pink opacity-20 blur-3xl rounded-full"></div>
+                    <!-- Main Hero Image -->
+                    <img src="https://i.ytimg.com/vi/q2lH8uhcf2Q/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgWihIMA8=&rs=AOn4CLDxSATHgpqGVStnFBAXUNXsvI6c9g" 
+                         alt="Alice Hael" 
+                         class="relative rounded-2xl shadow-2xl hero-glow w-full object-cover border-2 border-gray-800 transform rotate-2 hover:rotate-0 transition duration-500">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre" class="py-16 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
+                <div class="order-2 lg:order-1 relative">
+                     <img src="https://i.ytimg.com/vi/NOweKVuLMGE/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-DoACuAiKAgwIABABGGUgUyhQMA8=&rs=AOn4CLBL_QiQdqZVoPoUu49VqAJT97GMxg" 
+                         alt="Alice Hael Close Up" 
+                         class="rounded-2xl shadow-xl w-full object-cover grayscale hover:grayscale-0 transition duration-500 border border-gray-700">
+                </div>
+                <div class="order-1 lg:order-2 mb-10 lg:mb-0">
+                    <h2 class="text-3xl font-display font-bold text-white mb-4">Quem é <span class="text-brand-pink">Alice?</span></h2>
+                    <div class="w-20 h-1 bg-brand-pink mb-6"></div>
+                    <p class="text-gray-300 mb-4 leading-relaxed">
+                        Meu nome é Alice Hael. Eu uso minha voz e minha imagem para desmistificar o que é ser uma mulher trans/travesti no Brasil. Não é apenas sobre estética, é sobre sobrevivência, direitos e saúde mental.
+                    </p>
+                    <p class="text-gray-300 mb-6 leading-relaxed">
+                        Criei este espaço para compartilhar o que aprendi na pele. Dicas que vão desde a "montação" até como manter a cabeça erguida em ambientes hostis. Aqui a gente fala a real, sem filtros.
+                    </p>
+                    
+                    <div class="grid grid-cols-2 gap-4 mt-8">
+                        <div class="bg-black p-4 rounded-lg text-center border border-gray-800">
+                            <i class="fas fa-heart text-brand-pink text-2xl mb-2"></i>
+                            <h3 class="font-bold">Autoestima</h3>
+                        </div>
+                        <div class="bg-black p-4 rounded-lg text-center border border-gray-800">
+                            <i class="fas fa-fist-raised text-brand-pink text-2xl mb-2"></i>
+                            <h3 class="font-bold">Resistência</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips Section (The Core Content) -->
+    <section id="dicas" class="py-20 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-black text-white">Guia de Sobrevivência</h2>
+                <p class="mt-4 text-xl text-gray-400">Como lidar com o preconceito e viver plenamente.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-brand-pink/20 rounded-full flex items-center justify-center mb-6 text-brand-pink">
+                        <i class="fas fa-shield-alt text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Blindagem Emocional</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        O olhar do outro não define quem você é. Aprenda a diferenciar críticas construtivas de ódio gratuito. Trabalhe sua saúde mental para que o preconceito alheio não vire sua verdade interna.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-6 text-purple-400">
+                        <i class="fas fa-users text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Rede de Apoio</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Não ande só. Esteja conectada com outras meninas e pessoas da comunidade LGBTQIA+. Ter amigas que entendem suas dores é crucial para segurança física e conforto emocional.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center mb-6 text-pink-400">
+                        <i class="fas fa-balance-scale text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Conheça Seus Direitos</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Transfobia é crime no Brasil. Saiba onde denunciar e quais são seus direitos quanto ao uso do nome social e acesso a espaços. Informação é a sua melhor arma.
+                    </p>
+                </div>
+                
+                 <!-- Card 4 -->
+                 <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mb-6 text-blue-400">
+                        <i class="fas fa-sparkles text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Estética & Identidade</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        A "passabilidade" não é uma obrigação, mas sim uma escolha ou estratégia. Seja fiel à estética que te faz feliz, seja ela qual for. Você não deve feminilidade a ninguém.
+                    </p>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mb-6 text-green-400">
+                        <i class="fas fa-briefcase text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Ocupando Espaços</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Estude, trabalhe, ocupe lugares que dizem que não são para nós. O mercado de trabalho ainda é difícil, mas nossa presença em todos os setores é o maior ato político.
+                    </p>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                    <div class="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center mb-6 text-yellow-400">
+                        <i class="fas fa-comments text-xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Saber Responder</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Às vezes o silêncio é a melhor resposta, às vezes o deboche é necessário. Aprenda a ler o ambiente para saber quando educar e quando simplesmente virar as costas pela sua segurança.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="py-16 bg-black">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-display font-bold text-white mb-10 text-center"><span class="text-brand-pink">#</span>Visual</h2>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <!-- Image 1 -->
+                <div class="relative group overflow-hidden rounded-xl aspect-video">
+                    <img src="https://i.ytimg.com/vi/0npPsOoaL38/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgWShQMA8=&rs=AOn4CLDMMZsrNMKk6yvwJdV44npHXlx5Og" 
+                         class="object-cover w-full h-full transform transition duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Alice Hael Style">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <p class="font-bold">Estilo & Atitude</p>
+                    </div>
+                </div>
+
+                <!-- Image 2 -->
+                <div class="relative group overflow-hidden rounded-xl aspect-video">
+                    <img src="https://i.ytimg.com/vi/xu9mH-sNFLQ/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgUyhFMA8=&rs=AOn4CLDh-VERmDlYdZDYvpFcu0dPEXAZeA" 
+                         class="object-cover w-full h-full transform transition duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Alice Hael Look">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <p class="font-bold">Dia a Dia</p>
+                    </div>
+                </div>
+
+                <!-- Image 3 (Repeated/Placeholder from list) -->
+                <div class="relative group overflow-hidden rounded-xl aspect-video sm:col-span-2 md:col-span-1">
+                    <img src="https://i.ytimg.com/vi/q2lH8uhcf2Q/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGGUgWihIMA8=&rs=AOn4CLDxSATHgpqGVStnFBAXUNXsvI6c9g" 
+                         class="object-cover w-full h-full transform transition duration-500 group-hover:scale-110 opacity-80 group-hover:opacity-100" alt="Alice Hael Makeup">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-0 group-hover:opacity-100 transition duration-300 flex items-end p-4">
+                        <p class="font-bold">Maquiagem</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Newsletter -->
+    <section id="contato" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-brand-purple to-brand-pink opacity-20"></div>
+        <div class="max-w-4xl mx-auto px-4 relative z-10 text-center">
+            <h2 class="text-3xl font-display font-black mb-4">Faça Parte da Comunidade</h2>
+            <p class="text-gray-300 mb-8">
+                Quer saber mais dicas, receber tutoriais e conversar? Me siga nas redes sociais e mande sua pergunta.
+            </p>
+            
+            <div class="flex justify-center gap-6 mb-10">
+                <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-pink transition hover:-translate-y-1">
+                    <i class="fab fa-instagram text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-pink transition hover:-translate-y-1">
+                    <i class="fab fa-youtube text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-pink transition hover:-translate-y-1">
+                    <i class="fab fa-tiktok text-xl"></i>
+                </a>
+                <a href="#" class="w-12 h-12 bg-gray-800 rounded-full flex items-center justify-center hover:bg-brand-pink transition hover:-translate-y-1">
+                    <i class="fab fa-twitter text-xl"></i>
+                </a>
+            </div>
+
+            <form class="max-w-md mx-auto flex flex-col sm:flex-row gap-2" onsubmit="event.preventDefault(); alert('Obrigada por se inscrever, gata!');">
+                <input type="email" placeholder="Seu melhor e-mail" class="flex-1 bg-gray-900 border border-gray-700 text-white px-4 py-3 rounded-full focus:outline-none focus:border-brand-pink transition">
+                <button type="submit" class="bg-white text-brand-purple font-bold px-8 py-3 rounded-full hover:bg-gray-200 transition">
+                    Inscrever-se
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8 border-t border-gray-900 text-center">
+        <p class="text-gray-500 text-sm">
+            &copy; 2024 Alice Hael. Todos os direitos reservados. <br>
+            <span class="text-xs mt-2 block">Lute como uma garota.</span>
+        </p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
