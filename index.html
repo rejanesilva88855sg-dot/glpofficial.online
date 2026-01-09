@@ -17,7 +17,8 @@
                             pink: '#ff007f',
                             purple: '#4a0e4e',
                             dark: '#0f0f0f',
-                            light: '#f3f4f6'
+                            light: '#f3f4f6',
+                            red: '#8a1c1c' 
                         }
                     },
                     fontFamily: {
@@ -47,6 +48,11 @@
             box-shadow: 0 10px 20px rgba(255, 0, 127, 0.2);
             border-color: #ff007f;
         }
+        /* Efeito para os insultos */
+        .insult-card {
+            border-left: 4px solid #8a1c1c;
+            background: linear-gradient(90deg, #1a0505 0%, #0f0f0f 100%);
+        }
         /* Mobile menu transition */
         #mobile-menu {
             transition: max-height 0.3s ease-in-out;
@@ -70,9 +76,9 @@
                     <div class="ml-10 flex items-baseline space-x-4">
                         <a href="#inicio" class="hover:text-brand-pink px-3 py-2 rounded-md text-sm font-medium transition">Início</a>
                         <a href="#sobre" class="hover:text-brand-pink px-3 py-2 rounded-md text-sm font-medium transition">Quem Sou</a>
-                        <a href="#dicas" class="hover:text-brand-pink px-3 py-2 rounded-md text-sm font-medium transition">Guia de Sobrevivência</a>
+                        <a href="#realidade" class="hover:text-red-500 px-3 py-2 rounded-md text-sm font-medium transition">A Realidade</a>
+                        <a href="#dicas" class="hover:text-brand-pink px-3 py-2 rounded-md text-sm font-medium transition">Guia</a>
                         <a href="#advogado" class="hover:text-brand-pink px-3 py-2 rounded-md text-sm font-medium transition">Jurídico</a>
-                        <a href="#contato" class="bg-brand-pink hover:bg-pink-600 text-white px-4 py-2 rounded-full text-sm font-bold transition">Fale Comigo</a>
                     </div>
                 </div>
                 <div class="-mr-2 flex md:hidden">
@@ -86,9 +92,9 @@
             <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <a href="#inicio" onclick="toggleMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Início</a>
                 <a href="#sobre" onclick="toggleMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Quem Sou</a>
+                <a href="#realidade" onclick="toggleMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Realidade</a>
                 <a href="#dicas" onclick="toggleMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Dicas</a>
                 <a href="#advogado" onclick="toggleMenu()" class="text-gray-300 hover:text-white block px-3 py-2 rounded-md text-base font-medium">Jurídico</a>
-                <a href="#contato" onclick="toggleMenu()" class="text-brand-pink block px-3 py-2 rounded-md text-base font-bold">Contato</a>
             </div>
         </div>
     </nav>
@@ -156,7 +162,55 @@
         </div>
     </section>
 
-    <section id="dicas" class="py-20 relative">
+    <section id="realidade" class="py-20 bg-black relative border-t border-b border-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-display font-black text-white">O Veneno Deles</h2>
+                <p class="mt-4 text-xl text-gray-500">
+                    Você já ouviu isso. Eu já ouvi isso. <br>
+                    <span class="text-brand-red font-bold">Mas eles não vão nos parar.</span>
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                <div class="insult-card p-6 rounded-r-xl">
+                    <i class="fas fa-quote-left text-brand-red text-2xl mb-4 opacity-50"></i>
+                    <p class="text-xl text-gray-300 font-display italic">
+                        "É só um homem de peruca achando que é mulher."
+                    </p>
+                </div>
+
+                <div class="insult-card p-6 rounded-r-xl">
+                    <i class="fas fa-quote-left text-brand-red text-2xl mb-4 opacity-50"></i>
+                    <p class="text-xl text-gray-300 font-display italic">
+                        "Isso é uma abominação, vocês vão tudo para o inferno."
+                    </p>
+                </div>
+
+                <div class="insult-card p-6 rounded-r-xl">
+                    <i class="fas fa-quote-left text-brand-red text-2xl mb-4 opacity-50"></i>
+                    <p class="text-xl text-gray-300 font-display italic">
+                        "Nunca vai ser uma mulher de verdade, olha esse corpo."
+                    </p>
+                </div>
+
+                <div class="insult-card p-6 rounded-r-xl">
+                    <i class="fas fa-quote-left text-brand-red text-2xl mb-4 opacity-50"></i>
+                    <p class="text-xl text-gray-300 font-display italic">
+                        "Aberração da natureza."
+                    </p>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-white text-lg font-bold uppercase tracking-wider">
+                    ELES FALAM PARA NOS FERIR. NÓS OUVIMOS E FICAMOS MAIS FORTES.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="dicas" class="py-20 bg-gray-900 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-display font-black text-white">Guia de Sobrevivência</h2>
@@ -164,7 +218,7 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                <div class="bg-black p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
                     <div class="w-12 h-12 bg-brand-pink/20 rounded-full flex items-center justify-center mb-6 text-brand-pink">
                         <i class="fas fa-shield-alt text-xl"></i>
                     </div>
@@ -174,7 +228,7 @@
                     </p>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                <div class="bg-black p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
                     <div class="w-12 h-12 bg-purple-500/20 rounded-full flex items-center justify-center mb-6 text-purple-400">
                         <i class="fas fa-users text-xl"></i>
                     </div>
@@ -184,7 +238,7 @@
                     </p>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                <div class="bg-black p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
                     <div class="w-12 h-12 bg-pink-500/20 rounded-full flex items-center justify-center mb-6 text-pink-400">
                         <i class="fas fa-balance-scale text-xl"></i>
                     </div>
@@ -194,7 +248,7 @@
                     </p>
                 </div>
                 
-                 <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                 <div class="bg-black p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
                     <div class="w-12 h-12 bg-blue-500/20 rounded-full flex items-center justify-center mb-6 text-blue-400">
                         <i class="fas fa-sparkles text-xl"></i>
                     </div>
@@ -204,7 +258,7 @@
                     </p>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                <div class="bg-black p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
                     <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center mb-6 text-green-400">
                         <i class="fas fa-briefcase text-xl"></i>
                     </div>
@@ -214,7 +268,7 @@
                     </p>
                 </div>
 
-                <div class="bg-gray-900 p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
+                <div class="bg-black p-8 rounded-2xl border border-gray-800 card-hover transition duration-300">
                     <div class="w-12 h-12 bg-yellow-500/20 rounded-full flex items-center justify-center mb-6 text-yellow-400">
                         <i class="fas fa-comments text-xl"></i>
                     </div>
@@ -261,7 +315,25 @@
 
     <section class="py-16 bg-gray-900 border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-2xl font-display font-bold text-white mb-8 text-center text-gray-400 uppercase tracking-widest">Documentação & Registros</h2>
+            <h2 class="text-2xl font-display font-bold text-white mb-6 text-center text-gray-400 uppercase tracking-widest">Documentação & Registros</h2>
+            
+            <div class="text-center mb-10 bg-black/50 p-6 rounded-xl border border-gray-800 max-w-3xl mx-auto">
+                <p class="font-mono text-brand-pink text-xl md:text-2xl tracking-widest font-bold mb-4">
+                    RG 29.352.879-0 &nbsp;|&nbsp; CPF 180.852.237-08
+                </p>
+                
+                <div class="h-px w-24 bg-gray-700 mx-auto my-4"></div>
+
+                <p class="text-white text-lg font-bold leading-relaxed">
+                    "Olhe para esses números. Eles são do meu passado, mas eu sou o futuro."
+                </p>
+                <p class="text-gray-400 mt-2 italic">
+                    Se eu, com esse RG e CPF de homem, consegui fazer a minha montação, enfrentar o mundo e me tornar a mulher que sou hoje... 
+                    <span class="text-brand-pink font-bold">VOCÊ TAMBÉM CONSEGUE!</span> 
+                    A transformação começa de dentro para fora. Não deixe ninguém dizer que é impossível.
+                </p>
+            </div>
+
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div class="relative group rounded-2xl overflow-hidden border border-gray-700 shadow-xl bg-black">
                     <img src="https://i.postimg.cc/vH1b9DhR/1.png" alt="Registro 1" class="w-full h-auto object-contain transform transition duration-500 hover:scale-[1.02]">
